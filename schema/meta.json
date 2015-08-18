@@ -1,0 +1,9 @@
+{
+    "description": "Ice cream API",
+    "id": "icecream",
+    "links": [{
+        "href": "http://localhost:4567",
+        "rel": "self"
+    }],
+    "title": "Ice cream"
+}
