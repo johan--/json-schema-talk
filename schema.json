@@ -4,8 +4,71 @@
     "object"
   ],
   "definitions": {
+    "simple-menu": {
+      "$schema": "http://json-schema.org/draft-04/hyper-schema",
+      "title": "Simple Ice Cream menu",
+      "description": "Place an ice cream order using no $ref keywords",
+      "required": [
+        "ice_man",
+        "cow",
+        "grocer",
+        "hen"
+      ],
+      "type": [
+        "object"
+      ],
+      "properties": {
+        "ice_man": {
+          "type": [
+            "object"
+          ],
+          "properties": {
+            "ice": {
+              "type": [
+                "string"
+              ],
+              "enum": [
+                "cube",
+                "sphere",
+                "special square"
+              ]
+            },
+            "count": {
+              "type": [
+                "number"
+              ]
+            }
+          }
+        },
+        "hen": {
+          "type": [
+            "object"
+          ],
+          "properties": {
+            "egg": {
+              "type": [
+                "string"
+              ],
+              "enum": [
+                "brown",
+                "scavenged (turkey)",
+                "stolen (crocodile)"
+              ]
+            },
+            "count": {
+              "type": [
+                "number"
+              ]
+            }
+          }
+        }
+      }
+    }
   },
   "properties": {
+    "simple-menu": {
+      "$ref": "#/definitions/simple-menu"
+    }
   },
   "description": "Ice cream API",
   "id": "icecream",

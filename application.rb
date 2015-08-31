@@ -10,6 +10,12 @@ def combine(schema_filename)
   end
 end
 
+get "/" do
+  erb <<here
+<p><a href="/combine-schemata">Compile</a></p>
+here
+end
+
 get "/combine-schemata" do
   begin
     combine("./schema.json")
