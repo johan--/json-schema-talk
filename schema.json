@@ -36,9 +36,11 @@
               ]
             },
             "count": {
+              "title": "Count",
               "type": [
                 "number"
-              ]
+              ],
+              "minimum": 1
             }
           }
         },
@@ -77,6 +79,8 @@
               ]
             },
             "custom": {
+              "title": "Custom",
+              "description": "Write your own order",
               "type": [
                 "string"
               ]

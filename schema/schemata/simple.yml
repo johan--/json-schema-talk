@@ -24,7 +24,9 @@ properties:
           - sphere
           - special square
       count:
+        title: Count
         type: number
+        minimum: 1
   grocer:
     title: The Grocer
     type:
@@ -51,6 +53,8 @@ properties:
           - caramel
           - sea salt
       custom:
+        title: Custom
+        description: Write your own order
         type: string
   hen:
     title: The Hen

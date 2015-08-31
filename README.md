@@ -24,13 +24,13 @@ Run the server with
 ## Fill out a form...
 ...Make your selections for your kind of ice cream.
 
-[ingredients](http://localhost:4567/ingredients-from.html)
+[ingredients](http://localhost:4567/ingredients-from)
 
 ## Submit, and enjoy some ice cream!
 Submit send a post request to create some ice cream with the machine using the ingredients you chose.
 
 # Do it again, but using references ($ref)
-[schema-with-refs](http://localhost:4567/schema-with-refs.json)
+[schema-with-refs](http://localhost:4567/schema-with-refs.yml)
 
 [ice-man](http:localhost:4567/schema/ice-man.json)
 

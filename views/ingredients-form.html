@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Basic Editor Example | Alpacajs</title>
+        <!-- jquery -->
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        
+        <!-- bootstrap -->
+        <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />
+        <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        
+        <!-- handlebars -->
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.js"></script>
+        <link type="test/css" rel="stylesheet" href="http://code.cloudcms.com/alpaca/1.5.9/bootstrap/alpaca.min.css"/>
+        <script src="http://code.cloudcms.com/alpaca/1.5.9/bootstrap/alpaca.min.js"></script>
+    </head>
+    <body>
+        <h1>Form Example</h1>
+        <p> Wait a minute, this takes a while to compile</p>
+        <div id='form'></div>
+        <script type="text/javascript">
+         //get schema, munge in json, view should only grab the top level
+         //         schema: faculty.
+         //
+         var schema_url = "/schema/api.json"
+         var api_schema = {}
+         $(document).ready(function() {
+             $.ajax({
+                 url: schema_url,
+                 type: "GET",
+                 dataType: "json",
+                 success: function( json ){
+                     api_schema = json
+                     opts = {
+                         "type": "object",
+                         "definitions": api_schema.definitions,
+                         "properties": {
+                             "faculty": api_schema.definitions.faculty
+                         }
+                     },
+                     console.log(api_schema)
+                         console.log("the schema used to render form")
+                         console.log(opts)
+                         $("#form").alpaca({
+                             "schema": opts,
+                             "options": {
+                                 "fields": {
+                                     "gold_file":{
+                                         "files": {
+                                             "type": "upload",
+                                             "upload": {
+                                                 "url": "/fileuploads/{filename}"
+                                             }
+                                         }
+                                     }
+                                 },
+                                 "form": {
+                                     "attributes": {
+                                         "action": "http://httpbin.org/post",
+                                         "method": "post"
+                                     },
+                                     "buttons": {
+                                         "noop": {
+                                             "type": "button",
+                                             "value": "Do Nothing",
+                                             "styles": "btn btn-primary"
+                                         },
+                                         "validate": {
+                                             "title": "Validate and view JSON!",
+                                             "click": function() {
+                                                 this.refreshValidationState(true);
+                                                 if (this.isValid(true)) {
+                                                     var value = this.getValue();
+                                                     alert(JSON.stringify(value, null, "  "));
+                                                 }
+                                             }
+                                         },
+                                         "submit": {
+                                             "click": function() {
+                                                 var value = this.getValue();
+                                                 this.ajaxSubmit().always(function() {
+                                                     alert("Form submitted; value logged to browser console.");
+                                                     //todo log json
+                                                     //that was
+                                                     //submitted
+                                                     console.log(value)
+                                                 });
+                                             },
+                                             "id": "mySubmit",
+                                             "attributes": {
+                                                 "data-test": "123"
+                                             }
+                                         }
+                                     }
+                                 }
+                             },
+                             "postRender": function(control) {
+                                 control.form.getButtonEl("noop").click(function() {
+                                     alert("Ain't gonna do it");
+                                 })}
+                         })
+                 },
+                 error: function( xhr, status, errorThrown ) {
+                     alert( "Sorry, there was a problem!" );
+                     console.log( "Error: " + errorThrown );
+                     console.log( "Status: " + status );
+                     console.dir( xhr );
+                 },
+                 complete: function( xhr, status ) {
+                     console.log( "The request is complete!" );
+                 }
+             });
+
+         });
+         
+        </script>
+    </body>
+</html>
