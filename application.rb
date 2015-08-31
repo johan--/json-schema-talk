@@ -12,7 +12,7 @@ end
 
 def combine_with_refs(schema_filename)
   File.open(schema_filename, 'w') do |f|
-    f.write Prmd.combine("./schema/schemata-refs",
+    f.write Prmd.combine("./schema/schemata-with-refs",
                          meta:
                            "./schema/meta.json") #base:
   end
@@ -56,8 +56,14 @@ get "/ingredients-form" do
   erb :"ingredients-form"
 end
 
+get "/schema-with-refs-skeleton.yml" do
+  content_type :json
+  send_file ("./schema/schemata/schema-with-refs-skeleton.yml")
+end
+
 get "/schema-with-refs.json" do
-  
+  content_type :json
+  send_file ("./schema-with-refs.json")
 end
 
 get "/schema/ice-man.json" do
