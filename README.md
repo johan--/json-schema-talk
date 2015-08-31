@@ -10,7 +10,7 @@ An Ice cream machine makes ice cream out of
 - Egg yolks from the hen
 
 ## Examine...
-the schema in /schema/schemata/ice-cream.yml
+the schema in [/simple.json](http://localhost:4567/simple.yml)
 
 ## Display...
 ... the schema as a visual click through thingy. 

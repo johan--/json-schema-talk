@@ -30,8 +30,13 @@ get "/schema.json" do
   send_file ("./schema.json")
 end
 
-get "/ingedients-from.html" do
+get "/simple.yaml" do
+  content_type :json
+  send_file ("./schema/schemata/simple.yml")
+end
 
+get "/ingredients-form" do
+  erb :"ingredients-form"
 end
 
 get "/schema-with-refs.json" do

@@ -12,10 +12,12 @@ type:
 id: schemata/simple-menu
 properties:
   ice_man:
+    title: The Ice Man
     type:
       - object
     properties:
       ice:
+        title: Ice
         type: string
         enum:
           - cube
@@ -23,16 +25,46 @@ properties:
           - special square
       count:
         type: number
+  grocer:
+    title: The Grocer
+    type:
+      - object
+    properties:
+      ice_cream_essentials:
+        title: Essentials
+        type: string
+        enum:
+          - sugar
+          - stevia
+      mixins:
+        title: Mixins
+        type: string
+        enum:
+          - chocolate chips
+          - anchovies
+          - blueberries
+          - mixed fruit
+          - jello
+          - guar gum
+          - apples
+          - coffee
+          - caramel
+          - sea salt
+      custom:
+        type: string
   hen:
+    title: The Hen
     type:
       - object
     properties:
       egg:
+        title: Egg(s)
         type: string
         enum:
-          - brown
-          - scavenged (turkey)
-          - stolen (crocodile)
+          - brown/yolk only
+          - scavenged (turkey)/ whole
+          - stolen (crocodile)/ yolk only
       count:
+        title: Count
         type: number
-  
+
