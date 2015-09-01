@@ -1,0 +1,20 @@
+{
+    "form": {
+        "attributes": {
+            "action": "\/ice-cream",
+            "method": "post"
+        },
+        "buttons": {
+            "validate": {
+                "title": "Validate and view JSON!",
+                "click": function() {
+                    this.refreshValidationState(true);
+                    if (this.isValid(true)) {
+                        var value = this.getValue();
+                        alert(JSON.stringify(value, null, "  "));
+                    }
+                }
+            }
+        }
+    }
+}

@@ -161,30 +161,6 @@
           }
         }
       }
-    },
-    "ice-cream": {
-      "$schema": "http://json-schema.org/draft-04/hyper-schema",
-      "type": [
-        "-object"
-      ],
-      "properties": {
-        "ice-cream-with-refs-menu": {
-          "properties": {
-            "cow": {
-              "$ref": "#/definitions-with-refs/cow"
-            },
-            "grocer": {
-              "$ref": "#/definitions-with-refs/grocer"
-            },
-            "hen": {
-              "$ref": "#/definitions-with-refs/hen"
-            },
-            "ice-man": {
-              "$ref": "#/definitions-with-refs/ice-man"
-            }
-          }
-        }
-      }
     }
   },
   "properties": {
@@ -199,9 +175,6 @@
     },
     "ice-man": {
       "$ref": "#/definitions/ice-man"
-    },
-    "ice-cream": {
-      "$ref": "#/definitions/ice-cream"
     }
   },
   "description": "Ice cream API",

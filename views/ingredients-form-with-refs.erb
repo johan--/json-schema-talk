@@ -21,25 +21,28 @@
         <div id='form'></div>
         <script type="text/javascript">
          $("#form").alpaca({
-             "schemaSource": "/schema.json",
-             "options": {"form": {
-                 "attributes": {
-                     "action": "/ice-cream",
-                     "method": "post"
-                 },
-                 "buttons": {
-                     "validate": {
-                         "title": "Validate and view JSON!",
-                         "click": function() {
-                             this.refreshValidationState(true);
-                             if (this.isValid(true)) {
-                                 var value = this.getValue();
-                                 alert(JSON.stringify(value, null, "  "));
+             "schemaSource": "/schema-with-refs.json",
+             "optionsSource": {
+                 "form": {
+                     "attributes": {
+                         "action": "\/ice-cream",
+                         "method": "post"
+                     },
+                     "buttons": {
+                         "validate": {
+                             "title": "Validate and view JSON!",
+                             "click": function() {
+                                 this.refreshValidationState(true);
+                                 if (this.isValid(true)) {
+                                     var value = this.getValue();
+                                     alert(JSON.stringify(value, null, "  "));
+                                 }
                              }
                          }
                      }
                  }
-             }}
+             }
+
          });
         </script>
     </body>

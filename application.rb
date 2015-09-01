@@ -85,3 +85,12 @@ get "/schemata/grocer.yml" do
   content_type :json
   send_file ("./schema/schemata-with-refs/grocer.yml")
 end
+
+get "/ingredients-form-with-refs" do
+  erb :"ingredients-form-with-refs"
+end
+
+get "/buttons-options.json" do
+  content_type :json
+  send_file ("./buttons-options.json")
+end

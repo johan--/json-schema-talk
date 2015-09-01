@@ -3,7 +3,7 @@ $schema: http://json-schema.org/draft-04/hyper-schema
 title: The Hen
 type: 
   - object
-id: schemata-with-refs/hen
+id: schemata/ice-cream/hen
 properties:
   hen:
     title: The Hen

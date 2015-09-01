@@ -1,0 +1,8 @@
+---
+$schema: http://json-schema.org/draft-04/hyper-schema
+id: schemata/ice-cream
+type:
+  - object
+properties:
+  menu:
+    $ref: "/schemata/ice-cream#/definitions/cow"
