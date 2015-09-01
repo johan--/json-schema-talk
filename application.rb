@@ -56,11 +56,6 @@ get "/ingredients-form" do
   erb :"ingredients-form"
 end
 
-get "/schema-with-refs-skeleton.yml" do
-  content_type :json
-  send_file ("./schema/schemata/schema-with-refs-skeleton.yml")
-end
-
 get "/schema-with-refs.json" do
   content_type :json
   send_file ("./schema-with-refs.json")
@@ -93,4 +88,8 @@ end
 get "/buttons-options.json" do
   content_type :json
   send_file ("./buttons-options.json")
+end
+
+get "/search" do
+  erb :search
 end

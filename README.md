@@ -30,7 +30,6 @@ Run the server with
 Submit send a post request to create some ice cream with the machine using the ingredients you chose.
 
 # Do it again, but using references ($ref)
-[schema-with-refs](http://localhost:4567/schema-with-refs-skeleton.yml)
 
 [ice-man](http:localhost:4567/schemata/ice-man.yml)
 
@@ -40,6 +39,7 @@ Submit send a post request to create some ice cream with the machine using the i
 
 [grocer](http://localhost:4567/schemata/grocer.yml)
 
+[ingredients](http://localhost:4567/ingredients-form-with-refs)
 
-
+[Compile with refs](http://localhost:4567/)
 (feel free to use and change this project and code freely with no attribution)
