@@ -1,0 +1,23 @@
+---
+$schema: http://json-schema.org/draft-04/hyper-schema
+title: The Ice-man
+type: 
+  - object
+id: schemata-with-refs/ice-man
+properties:
+  ice_man:
+    title: The Ice Man
+    type:
+      - object
+    properties:
+      ice:
+        title: Ice
+        type: string
+        enum:
+          - cube
+          - sphere
+          - special square
+      count:
+        title: Count
+        type: number
+        minimum: 1

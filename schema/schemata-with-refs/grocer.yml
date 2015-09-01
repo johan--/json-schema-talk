@@ -1,0 +1,36 @@
+---
+$schema: http://json-schema.org/draft-04/hyper-schema
+title: The Grocer
+type: 
+  - object
+id: schemata-with-refs/grocer
+properties:
+  grocer:
+    title: The Grocer
+    type:
+      - object
+    properties:
+      ice_cream_essentials:
+        title: Essentials
+        type: string
+        enum:
+          - sugar
+          - stevia
+      mixins:
+        title: Mixins
+        type: string
+        enum:
+          - chocolate chips
+          - anchovies
+          - blueberries
+          - mixed fruit
+          - jello
+          - guar gum
+          - apples
+          - coffee
+          - caramel
+          - sea salt
+      custom:
+        title: Custom
+        description: Write your own order
+        type: string

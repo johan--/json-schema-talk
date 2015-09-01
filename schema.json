@@ -18,6 +18,34 @@
         "object"
       ],
       "properties": {
+        "cow": {
+          "title": "The Cow",
+          "type": [
+            "object"
+          ],
+          "properties": {
+            "milk": {
+              "title": "Milk",
+              "type": [
+                "string"
+              ],
+              "enum": [
+                "Cream",
+                "Whole",
+                "Organic-non-pasteurize-non-homogenized-non-gmo",
+                "Skim",
+                "1%"
+              ]
+            },
+            "quantity": {
+              "title": "Quantity (oz.)",
+              "type": [
+                "number"
+              ],
+              "minimum": 8
+            }
+          }
+        },
         "ice_man": {
           "title": "The Ice Man",
           "type": [

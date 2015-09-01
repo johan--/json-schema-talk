@@ -1,0 +1,22 @@
+---
+$schema: http://json-schema.org/draft-04/hyper-schema
+title: The Hen
+type: 
+  - object
+id: schemata-with-refs/hen
+properties:
+  hen:
+    title: The Hen
+    type:
+      - object
+    properties:
+      egg:
+        title: Egg(s)
+        type: string
+        enum:
+          - brown/yolk only
+          - scavenged (turkey)/ whole
+          - stolen (crocodile)/ yolk only
+      count:
+        title: Count
+        type: number

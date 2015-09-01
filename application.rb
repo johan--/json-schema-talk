@@ -66,18 +66,22 @@ get "/schema-with-refs.json" do
   send_file ("./schema-with-refs.json")
 end
 
-get "/schema/ice-man.json" do
-
+get "/schemata/ice-man.yml" do
+  content_type :json
+  send_file ("./schema/schemata-with-refs/ice-man.yml")
 end
 
-get "/schema/cow.json" do
-
+get "/schemata/cow.yml" do
+  content_type :json
+  send_file ("./schema/schemata-with-refs/cow.yml")
 end
 
-get "/schema/hen.json" do
-
+get "/schemata/hen.yml" do
+  content_type :json
+  send_file ("./schema/schemata-with-refs/hen.yml")
 end
 
-get "/schema/grocer.json" do
-
+get "/schemata/grocer.yml" do
+  content_type :json
+  send_file ("./schema/schemata-with-refs/grocer.yml")
 end

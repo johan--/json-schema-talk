@@ -17,28 +17,28 @@ the schema in [/simple.json](http://localhost:4567/simple.yml)
 Run the server with 
 `ruby application.rb`
 
-[Thingy](http://localhost:4567/docson)
+[Thingy](http://localhost:4567/docson/index.html#/schema.json)
 
 [schema.json](http://localhost:4567/schema.json)
 
 ## Fill out a form...
 ...Make your selections for your kind of ice cream.
 
-[ingredients](http://localhost:4567/ingredients-from)
+[ingredients](http://localhost:4567/ingredients-form)
 
 ## Submit, and enjoy some ice cream!
 Submit send a post request to create some ice cream with the machine using the ingredients you chose.
 
 # Do it again, but using references ($ref)
-[schema-with-refs](http://localhost:4567/schema-with-refs.yml)
+[schema-with-refs](http://localhost:4567/schema-with-refs-skeleton.yml)
 
-[ice-man](http:localhost:4567/schema/ice-man.json)
+[ice-man](http:localhost:4567/schemata/ice-man.yml)
 
-[cow](http://localhost:4567/schema/cow.json)
+[cow](http://localhost:4567/schemata/cow.yml)
 
-[hen](http://localhost:4567/schema/hen.json)
+[hen](http://localhost:4567/schemata/hen.yml)
 
-[grocer](http://localhost:4567/schema/grocer.json)
+[grocer](http://localhost:4567/schemata/grocer.yml)
 
 
 

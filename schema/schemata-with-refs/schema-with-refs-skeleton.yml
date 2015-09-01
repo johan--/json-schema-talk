@@ -1,0 +1,16 @@
+---
+$schema: http://json-schema.org/draft-04/hyper-schema
+id: schemata-with-refs/ice-cream
+type:
+  -object
+properties:
+  ice-cream-with-refs-menu:
+    properties:
+      cow:
+        $ref: /schemata-with-refs/cow
+      grocer:
+        $ref: /schemata-with-refs/grocer
+      hen:
+        $ref: /schemata-with-refs/hen    
+      ice-man:
+        $ref: /schemata-with-refs/ice-man

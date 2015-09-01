@@ -1,0 +1,25 @@
+---
+$schema: http://json-schema.org/draft-04/hyper-schema
+title: The Cow
+type: 
+  - object
+id: schemata-with-refs/cow
+properties:
+  cow:
+    title: The Cow
+    type:
+      - object
+    properties:
+      milk:
+        title: Milk
+        type: string
+        enum:
+          - Cream
+          - Whole
+          - Organic-non-pasteurize-non-homogenized-non-gmo
+          - Skim
+          - 1%
+      quantity:
+        title: Quantity (oz.)
+        type: number
+        minimum: 8
